@@ -1,0 +1,6 @@
+{
+  "name": "Velvet Flame Fine Dining",
+  "description": "An elegant, Michelin-inspired luxury restaurant in Madurai, India, uniting French culinary arts with southern spice heritage.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

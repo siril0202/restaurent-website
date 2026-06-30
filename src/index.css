@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  --font-display: "Cinzel", Georgia, serif;
+
+  /* Custom Premium Colors based on Artistic Flair Theme */
+  --color-burgundy-950: #050505; /* Deep black space background */
+  --color-burgundy-900: #1C0202; /* Very dark crimson variant */
+  --color-burgundy-800: #420303; /* Signature rich deep crimson/burgundy */
+  --color-burgundy-700: #5E0808; /* Vivid crimson accent */
+  --color-burgundy-600: #7B0C0C;
+  --color-burgundy-500: #9E1515;
+
+  --color-gold-100: #FDF7E4;
+  --color-gold-200: #F0DFA2;
+  --color-gold-300: #E2C35D;
+  --color-gold-400: #D4AF37; /* Signature Artistic Flair Gold */
+  --color-gold-500: #C29F2E; 
+  --color-gold-600: #B69225;
+  --color-gold-700: #937418;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    background-color: #050505; /* Artistic Flair deep background */
+    color: #F5F5F5;
+  }
+
+  /* Custom luxury scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #050505;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #420303;
+    border: 2px solid #050505;
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #D4AF37;
+  }
+
+  /* Text selection highlight */
+  ::selection {
+    background: #420303;
+    color: #FDF7E4;
+  }
+}
+
+/* Custom cinematic animations */
+@keyframes slow-pan {
+  0% {
+    transform: scale(1) translate(0, 0);
+  }
+  50% {
+    transform: scale(1.08) translate(-1%, 0.5%);
+  }
+  100% {
+    transform: scale(1) translate(0, 0);
+  }
+}
+
+.animate-slow-pan {
+  animation: slow-pan 25s infinite ease-in-out;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.shimmer {
+  background: linear-gradient(90deg, #1C0407 25%, #33060C 50%, #1C0407 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
